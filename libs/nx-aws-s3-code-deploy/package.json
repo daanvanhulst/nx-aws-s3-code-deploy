@@ -20,6 +20,10 @@
     "ng deploy",
     "nx deploy"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daanvanhulst/nx-aws-s3-code-deploy"
+  },
   "private": false,
   "author": "Daan van Hulst",
   "license": "MIT",
