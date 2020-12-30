@@ -24,8 +24,8 @@ https://medium.com/paul-zhao-projects/continuous-deployment-pipeline-with-bitbuc
    ng new hello-world --defaults
    cd hello-world
 
-3. Add @jefiozie/ngx-aws-deploy to your project
-   ng add @jefiozie/ngx-aws-deploy
+3. Add @ascentio/nx-aws-s3-code-deploy to your project
+   ng add @ascentio/nx-aws-s3-code-deploy
 
 4. create a .env file and add the following variables:
    NX_DEPLOY_AWS_S3_ACCESS_KEY_ID=
