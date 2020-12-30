@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "projects": {
+    "nx-aws-s3-code-deploy": {
+      "root": "libs/nx-aws-s3-code-deploy",
+      "sourceRoot": "libs/nx-aws-s3-code-deploy/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/nx-aws-s3-code-deploy/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/nx-aws-s3-code-deploy/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/libs/nx-aws-s3-code-deploy",
+            "tsConfig": "libs/nx-aws-s3-code-deploy/tsconfig.lib.json",
+            "packageJson": "libs/nx-aws-s3-code-deploy/package.json",
+            "main": "libs/nx-aws-s3-code-deploy/src/index.ts",
+            "assets": [
+              "libs/nx-aws-s3-code-deploy/*.md",
+              {
+                "input": "libs/nx-aws-s3-code-deploy",
+                "glob": "collection.json",
+                "output": "."
+              },
+              {
+                "input": "libs/nx-aws-s3-code-deploy",
+                "glob": "builders.json",
+                "output": "."
+              },
+              {
+                "input": "libs/nx-aws-s3-code-deploy",
+                "glob": "src/lib/**/*.json",
+                "output": "."
+              },
+              {
+                "input": "libs/nx-aws-s3-code-deploy",
+                "glob": "src/lib/**/**/*.d.ts",
+                "output": "."
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "bd491b8b-b719-496d-b414-d217be19fa00"
+  },
+  "schematics": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "demo-app"
+}

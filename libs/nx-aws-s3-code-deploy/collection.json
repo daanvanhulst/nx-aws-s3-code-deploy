@@ -1,0 +1,10 @@
+{
+  "$schema": "@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-add": {
+      "description": "Add @ascentio/nx-aws-s3-code-deploy schematic",
+      "factory": "./src/lib/ng-add#ngAdd",
+      "schema": "./src/lib/ng-add/schema.json"
+    }
+  }
+}

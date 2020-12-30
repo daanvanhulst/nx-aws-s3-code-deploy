@@ -1,0 +1,34 @@
+{
+  "name": "@ascentio/nx-aws-s3-code-deploy",
+  "version": "1.0.0",
+  "description": "Deploy your applicaton through CodeDeploy using nx deploy",
+  "main": "index.js",
+  "builders": "./builders.json",
+  "schematics": "./collection.json",
+  "ng-add": {
+    "save": "devDependencies"
+  },
+  "keywords": [
+    "angular",
+    "schematics",
+    "cli",
+    "angular-cli",
+    "amazon",
+    "aws",
+    "deploy",
+    "codedeploy",
+    "ng deploy",
+    "nx deploy"
+  ],
+  "author": "Daan van Hulst",
+  "license": "MIT",
+  "dependencies": {
+    "@angular-devkit/architect": ">=0.901.0",
+    "@angular-devkit/core": ">=8.0.0",
+    "@angular-devkit/schematics": ">=8.0.0",
+    "archiver": "^5.1.0",
+    "aws-sdk": "^2.599.0",
+    "glob": "^7.1.6",
+    "mime-types": "^2.1.26"
+  }
+}
