@@ -20,6 +20,7 @@
     "ng deploy",
     "nx deploy"
   ],
+  "private": false,
   "author": "Daan van Hulst",
   "license": "MIT",
   "dependencies": {

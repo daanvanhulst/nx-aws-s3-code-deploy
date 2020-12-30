@@ -53,6 +53,12 @@
               }
             ]
           }
+        },
+        "deploy": {
+          "builder": "ngx-deploy-npm:deploy",
+          "options": {
+            "access": "public"
+          }
         }
       }
     }
