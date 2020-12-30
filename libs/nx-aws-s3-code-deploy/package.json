@@ -1,6 +1,6 @@
 {
   "name": "@ascentio/nx-aws-s3-code-deploy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Deploy your applicaton through CodeDeploy using nx deploy",
   "main": "index.js",
   "builders": "./builders.json",
